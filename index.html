@@ -1,0 +1,28 @@
+# Marvel123456.github.io
+testing.
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>New webpage</title>
+    </head>
+    <body>
+
+    <input id='colPick' type='color'>
+    <button onClick='backgroundChange()'>Change background</button>
+    <button onClick="place()"><img src='https://www.kasandbox.org/programming-images/creatures/Winston.png' width="20"></button>
+    </body>
+    <script>
+        
+        var cP = document.getElementById("colPick")
+        function backgroundChange(){
+            var b = document.getElementsByTagName("body")[0];
+
+            b.style.backgroundColor = cP.value;
+        
+        }
+        function place(){
+            
+        }
+    </script>
+</html>
