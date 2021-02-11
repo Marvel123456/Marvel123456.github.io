@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <title>Processing.JS inside Webpages: Template</title> 
+  </head>
+  <body>
+  
+    <canvas id="canvas"></canvas> 
+    
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+  <script>
+  var doodle = function(processingInstance) {
+    with (processingInstance) {
+      size(1578, 750); 
+      background(255);
+      var strkWg = 1;
+      
+      var r = 1;
+      var g = 1;
+      var b = 1;
+      
+		draw = function(){
+			mouseDragged = function(){
+				stroke(r,g,b)
+				strokeWeight(strkWg);
+				line(pmouseX,pmouseY,mouseX,mouseY);
+			}
+			
+			fill(255)
+			stroke(0)
+			strokeWeight(1)
+			rect(5,42,41,33);
+			rect(5,88,41,33);
+			
+			rect(7,155,41,33);
+			rect(7,188,41,33);
+			rect(7,221,41,33);
+			
+			fill(r,g,b)
+			rect(1500,8,77,90);
+			
+			fill(0)
+			textSize(22);
+			text("+",20,68);
+			text("-",23,111);
+			
+			
+			text("R",20,179);
+			text("G",20,213);
+			text("B",20,248);
+			
+			if(mouseX > 5 && mouseX < 5+41 && mouseY > 42 && mouseY < 42+33){
+				cursor("pointer")
+				mousePressed = function(){
+					strkWg+=1;
+				}
+			}else{
+				cursor("default")
+			}
+			
+			if(mouseX > 5 && mouseX < 5+41 && mouseY > 88 && mouseY < 88+33){
+				cursor("pointer");
+				mousePressed = function(){
+					strkWg+=1;
+				}
+			}
+			
+			if(mouseX > 7 && mouseX < 7+41 && mouseY > 155 && mouseY < 155+33){
+				cursor("pointer");
+				mousePressed = function(){
+					r+=29;
+				}
+			}
+			
+			if(mouseX > 7 && mouseX < 7+41 && mouseY > 188 && mouseY < 188+33){
+				cursor("pointer");
+				mousePressed = function(){
+					g+=10;
+				}
+			}
+			
+			if(mouseX > 7 && mouseX < 7+41 && mouseY > 221 && mouseY < 221+33){
+				cursor("pointer");
+				mousePressed = function(){
+					b+=10;
+				}
+			}
+			
+		}
+    }};
+
+
+  var canvas = document.getElementById("canvas"); 
+  
+  var processingInstance = new Processing(canvas, doodle); 
+  </script>
+</html>
