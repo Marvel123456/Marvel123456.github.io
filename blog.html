@@ -145,7 +145,7 @@
             button.addEventListener("click", function(){
 	    if(postbox.value !== ""){
                 
-                    info = info+"<h3>"+date.value+"</h3></br>"+postbox.value+"☼";
+                    info = info+"<h3>"+date.value+"</h3>"+postbox.value+"☼";
                     localStorage.setItem("hmm", info);
                     
                     info = localStorage.getItem("hmm");
