@@ -34,22 +34,13 @@
 			rect(5,42,41,33);
 			rect(5,88,41,33);
 			
-			rect(7,155,41,33);
-			rect(7,188,41,33);
-			rect(7,221,41,33);
-			
 			fill(r,g,b)
-			rect(1500,8,77,90);
+			rect(34,8,77,90);
 			
 			fill(0)
 			textSize(22);
 			text("+",20,68);
 			text("-",23,111);
-			
-			
-			text("R",20,179);
-			text("G",20,213);
-			text("B",20,248);
 			
 			if(mouseX > 5 && mouseX < 5+41 && mouseY > 42 && mouseY < 42+33){
 				cursor("pointer")
@@ -64,27 +55,6 @@
 				cursor("pointer");
 				mousePressed = function(){
 					strkWg-=1;
-				}
-			}
-			
-			if(mouseX > 7 && mouseX < 7+41 && mouseY > 155 && mouseY < 155+33){
-				cursor("pointer");
-				mousePressed = function(){
-					r+=29;
-				}
-			}
-			
-			if(mouseX > 7 && mouseX < 7+41 && mouseY > 188 && mouseY < 188+33){
-				cursor("pointer");
-				mousePressed = function(){
-					g+=10;
-				}
-			}
-			
-			if(mouseX > 7 && mouseX < 7+41 && mouseY > 221 && mouseY < 221+33){
-				cursor("pointer");
-				mousePressed = function(){
-					b+=10;
 				}
 			}
 			
