@@ -5,10 +5,17 @@
         <title>New webpage</title>
     </head>
     <body>
-
-    <input id='colPick' type='color'>
-    <button onClick='backgroundChange()'>Change background</button>
-    <button onClick="place()"><img src='https://www.kasandbox.org/programming-images/creatures/Winston.png' width="20"></button>
+    
+        <div id = "pgUno">
+            <input id='colPick' type='color'>
+            <button onClick='backgroundChange()'>Change background</button>
+            <button onClick="pg()"><img src='https://www.kasandbox.org/programming-images/creatures/Winston.png' width="20"></button>
+        </div>
+        
+        <div id = "pgDos">
+            <img src = "https://i.pinimg.com/originals/e2/44/66/e2446616a8e43dbbd5f836ff0522e51c.jpg">
+        </div>
+    
     </body>
     <script>
         
@@ -19,8 +26,9 @@
             b.style.backgroundColor = cP.value;
         
         }
-        function place(){
-            
+        function pg(){
+            document.getElementById("pgUno").style.display = "none";
+            document.getElementById("pgDos").style.display = "block"; 
         }
     </script>
 </html>
