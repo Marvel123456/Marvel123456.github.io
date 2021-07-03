@@ -3,12 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title>The Blogsite</title>
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Ruluko&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ruluko&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
 
         <style>
         
@@ -37,7 +36,6 @@
             }
             button:hover{
                 cursor:pointer;
-                transform:rotate(360deg);
                 transition-duration:0.8s;
             }
             
@@ -119,8 +117,8 @@
     </body>
    
     <script>
-
-            var page = document.getElementsByClassName('page');
+	    
+	    var page = document.getElementsByClassName('page');
 
             function changePage(index) {
                 for ( var i = 0; i < page.length; i++ ) {
@@ -131,32 +129,23 @@
                 window.scroll(0, 0);
             }
             changePage(1);
-            
-        var info = localStorage.getItem("hmm") || "";
-        
-        var postbox = document.getElementById("blog");
-
-        var button = document.getElementById("post");
-        
-        var date = document.getElementById("dateSelection");
-        
-        var div = document.getElementById("blogpost");
-            
+           
+	    var info = localStorage.getItem("hmm") || "";
+	    var postbox = document.getElementById("blog");
+	    var button = document.getElementById("post");
+	    var date = document.getElementById("dateSelection");
+	    var div = document.getElementById("blogpost");
             var update = function() {
-
-                var items = info.split("☼");
-                div.innerHTML = "";
-                for(var i = 0; i < items.length-1; i++){
-                    div.innerHTML = div.innerHTML+'<div class = "message">'+items[i]+'</div>';
-                }
-            }
-            update();
+		    var items = info.split("☼");
+		    div.innerHTML = "";
+		    for(var i = 0; i < items.length-1; i++){
+                    	div.innerHTML = div.innerHTML+'<div class = "message">'+items[i]+'</div>';
+		    }
+	    }
+	    update();
             
             button.addEventListener("click", function(){
-                
-                alert("Click on 'Read Post' to read your post. If you havent filled out the date or the content of the post then it wont show up. If on-noes is acting up then just restart this webpage, dont worry your post will still be there because this webpage uses localStorage()")
-                
-                if(postbox.value !== ""){
+	    if(postbox.value !== ""){
                 
                     info = info+"<h3>"+date.value+"</h3></br>"+postbox.value+"☼";
                     localStorage.setItem("hmm", info);
@@ -169,49 +158,6 @@
             });
             
         </script>
-        
-    <!--Thumbnail Code - Credit to @birdwatcher03!-->
-        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.3/dist/html2canvas.min.js"></script>
-        <script type>
-            var body = document.getElementsByTagName("body")[0];
-            window.addEventListener("keydown", function(e) {
-                if (e.keyCode === 27) {
-                    document.getElementById("menu-wrap").style.display = "none";
-                    body.style.pointerEvents = "none";
-                } else if (e.keyCode === 65) {
-                    body.style.pointerEvents = "all";
-                    document.getElementById("menu-wrap").style.display = "block";
-                }
-            });
-            var save = function() {
-                html2canvas(document.body, {
-                        allowTaint: false,
-                        useCORS: true,
-                        width: document.documentElement.clientWidth,
-                        height: document.documentElement.clientWidth,
-                    })
-                    .then(function(canvas) {
-                        b64Img = canvas.toDataURL();
-                        window.top.postMessage(b64Img, "https://www.khanacademy.org/");
-                    });
-            };
-            var handleSave = function(e) {
-                if (JSON.parse(e.data)
-                    .screenshot) {
-                    setTimeout(function() {
-                        console.log("Saving...");
-                        save();
-                    }, 1000)
-                }
-            };
-            window.parent.savers = window.parent.savers || 0;
-            window.parent.addEventListener('message', handleSave);
-            window.parent.savers += 1;
-            for (window.parent.savers; window.parent.savers > 1; window.parent.savers -= 1) {
-                window.parent.removeEventListener('message', handleSave)
-            }
-        </script>
-   
 </html>
 <!--
 
