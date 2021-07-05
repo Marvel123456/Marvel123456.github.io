@@ -49,6 +49,14 @@
 				cursor("default")
 			}
 			
+			if(mouseX > 5 && mouseX < 5+41 && mouseY > 88 && mouseY < 88+33){
+				cursor("pointer")
+				mousePressed = function(){
+					strkWg-=1;
+				}
+			}
+			
+			
 			if(mouseX > 5 && mouseX < 5+41 && mouseY > 140 && mouseY < 140+33){
 				cursor("pointer");
 				mousePressed = function(){
