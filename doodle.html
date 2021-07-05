@@ -23,6 +23,10 @@
 				stroke(strk)
 				if(mouseButton === RIGHT){
 					strk = color(255);
+					strkWg = 5;
+				}else {
+					strk = color(0);
+					strk = 1;
 				}
 				strokeWeight(strkWg);
 				line(pmouseX,pmouseY,mouseX,mouseY);
