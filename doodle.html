@@ -57,15 +57,13 @@
 			}
 			
 			
-			if(mouseX > 5 && mouseX < 5+41 && mouseY > 140 && mouseY < 140+33){
-				cursor("pointer");
+			if(mousePressed && mouseButton === RIGHT){
 				mousePressed = function(){
 					strk = color(255,255,255);					
 				}
 			}else {
 				strk = color(0);
 			}
-			//strk = color(0);
 		}
     }};
 
