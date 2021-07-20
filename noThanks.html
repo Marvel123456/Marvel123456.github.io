@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>no thanks</title>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
+    </head>
+    
+    <!-- Selection styling -->
+    <style>
+        
+        ::selection{
+            background:none;
+            color:red;
+        }
+        
+    </style>
+    
+    <!-- Mammal names styling -->
+    <style>
+        
+        #group_names{
+            width:154px;
+            height:65px;
+            background:rgb(173, 255, 196);
+            font-family:comfortaa;
+            text-align:center;
+        }
+        
+    </style>
+    
+    <!-- link styling -->
+    <style>
+        
+        a {
+			display: inline-block;
+			color: teal;
+			text-decoration: none;
+		}
+		
+		a::after {
+		    content: "";
+		    margin-top: -2px;
+		    width: 0px;
+		    height: 1.5px;
+		    display: block;
+			background: linear-gradient(90deg, rgb(252, 0, 0), rgb(255, 208, 0));
+		    transition: 0.8s;
+		}
+		
+		a:hover::after {
+		    width: 100%;
+		}
+		
+		a:hover {
+		    transition: 0.8s;
+			background: linear-gradient(90deg, rgb(0, 97, 252), rgb(0, 255, 60));
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+        
+    </style>
+    
+    <!-- Scrollbar styling -->
+    <style>
+        
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background:rgb(255, 255, 255);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background:rgb(179, 4, 4);
+        }
+        ::-webkit-scrollbar-thumb {
+            background:rgb(255, 0, 0);
+        }
+        
+    </style>
+    
+    <!-- Navbar Styling -->
+    <style>
+        
+                
+        #navbar {
+            font-size:24px;
+            text-align:center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 6px 0px;
+            background-color: rgba(255, 255, 255,0.9);
+            z-index: 1;
+        }
+        
+        #navbar a {
+            color:rgb(50, 110, 75);
+            text-decoration: none;
+            padding: 1px 11px;
+            font-family:"comfortaa" , cursive;
+            text-shadow: 0 2px 3px rgba(176, 176, 176,1), 0 6px 6px rgba(255, 255, 255,0.3);
+        }
+        
+    </style>
+    
+    <!-- CSS animations/transitions -->
+    <style>
+        
+        @-webkit-keyframes fading_transition{
+            to{
+                opacity:3;
+            }
+            from{
+                opacity:0;
+            }
+        }
+        
+    </style>
+    
+    <!-- Header -->
+    <style>
+        
+        #header{
+            background:url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/New_hampshire_in_autumn.jpg/800px-New_hampshire_in_autumn.jpg");
+            height: 287px;
+        	margin: -29px -25px;
+        	background-attachment: fixed;
+			background-position: center;
+  			background-repeat: no-repeat;
+  			background-size: cover;
+  			animation-name:fading_transition;
+            animation-duration:4s;
+        }
+        
+    </style>
+    
+    <!-- Body styling -->
+    <style>
+
+        body {
+        		font-family: "Handlee";
+        		font-size: 18px;
+        		margin: auto 25px;
+        }
+        
+        h1 {
+            margin-top:50px;
+        }
+        
+    </style>
+    
+    <body>
+    
+        <!-- Nav Bar -->
+        <div id = "navbar">
+            <a style='font-size:26px;' href = "javascript:changePage(1);">Home</a>
+            <a  style='font-size:26px;'  href = "javascript:changePage(2);">Animals</a>
+            <a style='font-size:26px;'  href = "javascript:changePage(3);">Insects</a>
+            <a style='font-size:26px;'  href = "javascript:changePage(4);">Trees</a>
+            <a style='font-size:26px;'  href = "javascript:changePage(5);">Flowers</a>
+        </div>
+        
+        <!-- Home page -->
+        <div class = "page" ><br><br>
+            <h1 style='font-family:"comfortaa" , cursive;'>Nature.</h1>
+            
+            <div id = 'header'></div><br><br>
+            <div id = 'header' style='background:url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Ocean_from_Leblon.jpg/800px-Ocean_from_Leblon.jpg");height: 283px;margin: 10px -25px;background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;'></div>
+        <div style='font-family:"comfortaa" , cursive;' id='nature'><br><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, ligula sed malesuada vulputate, massa mi hendrerit mauris, ut finibus erat eros vitae tellus. Pellentesque ullamcorper nunc vel enim elementum eleifend. Vivamus nec massa accumsan, bibendum sem nec, pharetra justo. Nunc volutpat nibh at lacus finibus tempus eget lobortis neque. Praesent tristique urna vitae risus faucibus, sed ornare libero consectetur. Sed neque urna, gravida vel arcu a, posuere maximus erat. Nulla iaculis condimentum leo auctor accumsan.<br><br>Some people find Nature beautiful, while others lock themselves inside their house. xD
+            </div><br><br><br><br><br>
+        </div>
+        
+        <!-- Animals Page -->
+        <div class = "page"><br><br><br>
+            <div id='header' style='background:url("https://upload.wikimedia.org/wikipedia/commons/a/a4/Tiger_in_the_water.jpg");height: 390px;margin: 10px -25px;background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;'></div>
+            <div style='font-family:"comfortaa" , cursive;' id='nature'><br><br><h1>Mammals</h1><br>Mammals are a group of animals with an internal skeleton including a backbone. Mammals are warm blooded creatures.<br><br><img src ='https://www.khanacademy.org/computer-programming/koala/4739132015984640/5865031922827264.png'><img src = 'https://www.khanacademy.org/computer-programming/aardvark-wip/6084012105482240/5952827429699584.png'><h1>Mammal Groups</h1><br>
+            
+            <!-- Mammal group names -->
+            <br>
+            
+            <div id = 'group_names'><br>
+                Diprotodontia:
+            </div><br>
+            <div id='group_names'><br>
+                Monotremata
+            </div><br>
+            <div id='group_names'><br>
+                Hydacoidea
+            </div><br>
+            <div id='group_names'><br>
+                Tubulidentata
+            </div><br>
+            <div id='group_names'><br>
+                Monotremata
+            </div><br>
+            <div id='group_names'><br>
+                Pholidota
+            </div><br>
+            <div id='group_names'><br>
+                Chiroptera
+            </div><br><br>
+            <h1>Amiphibians</h1>
+            Amphibians are small vertebrates that need water, or a moist environment, to survive. The species in this group include frogs, toads, salamanders, and newts. All can breathe and absorb water through their very thin skin. Amphibians also have special skin glands that produce useful proteins.
+            <div id='header' style='background:url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Plethodon_cinereus.jpg/1280px-Plethodon_cinereus.jpg");height: 390px;margin: 10px -25px;background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;'></div><br><br><h1>Reptiles</h1>Reptiles are air-breathing vertebrates covered in special skin made up of scales, bony plates, or a combination of both. They include crocodiles, snakes, lizards, turtles, and tor- toises. All regularly shed the outer layer of their skin. Their metabolism depends on the temperature of their environment.<br><br><br>DISCLAIMER: THE NEXT PICTURE IS SCARY, CHILDERN BELOW 12 SHOULDNT BE SEEING THIS. <div id='header' style='background:url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Emerald_Tree_Boas_NC.jpg/800px-Emerald_Tree_Boas_NC.jpg");height: 390px;margin: 10px -25px;background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;'></div><br><br><H1>Birds</H1><br><br><div id='header' style='background:url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Greater_flamingo_galapagos.JPG/663px-Greater_flamingo_galapagos.JPG");height: 390px;margin: 10px -25px;background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;'></div><br>Birds are a group of warm-blooded vertebrates constituting the class Aves, characterized by feathers, toothless beaked jaws, the laying of hard-shelled eggs, a high metabolic rate, a four-chambered heart, and a strong yet lightweight skeleton.<br><br><br><br><h1>Fish</h1>
+            <div id='header' style='background:url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Great_white_shark_near_Gansbaai%2C_South_Africa.jpg/800px-Great_white_shark_near_Gansbaai%2C_South_Africa.jpg");height: 390px;margin: 10px -25px;background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;left:90px'></div><br>Fish are gill-bearing aquatic craniate animals that lack limbs with digits. They form a sister group to the tunicates, together forming the olfactores. Included in this definition are the living hagfish, lampreys, and cartilaginous and bony fish as well as various extinct related groups. <br><br><br><br>
+            
+            </div>
+            
+        </div>
+        
+        <!-- Insects page -->
+        <div class='page'><br><br><br>
+            
+            <div id = 'header' style='background:url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Limenitis_archippus_Cramer.jpg/799px-Limenitis_archippus_Cramer.jpg");height: 339px;margin: 10px -25px;background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;'></div>
+            <div style='font-family:"comfortaa" , cursive;' id='nature'><br><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, ligula sed malesuada vulputate, massa mi hendrerit mauris, ut finibus erat eros vitae tellus. Pellentesque ullamcorper nunc vel enim elementum eleifend. Vivamus nec massa accumsan, bibendum sem nec, pharetra justo. Nunc volutpat nibh at lacus finibus tempus eget lobortis neque. Praesent tristique urna vitae risus faucibus, sed ornare libero consectetur. Sed neque urna, gravida vel arcu a, posuere maximus erat. Nulla iaculis condimentum leo auctor accumsan.<br><br>
+            </div><br><br><br><br><br>
+            
+        </div>
+        
+        <!-- Trees Page -->
+        <div class='page'><br><br><br>
+            
+            <div id = 'header' style='background:url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Ash_Tree_-_geograph.org.uk_-_590710.jpg/450px-Ash_Tree_-_geograph.org.uk_-_590710.jpg");height: 339px;margin: 10px -25px;background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;'></div>
+            <div style='font-family:"comfortaa" , cursive;' id='nature'><br><br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, ligula sed malesuada vulputate, massa mi hendrerit mauris, ut finibus erat eros vitae tellus. Pellentesque ullamcorper nunc vel enim elementum eleifend. Vivamus nec massa accumsan, bibendum sem nec, pharetra justo. Nunc volutpat nibh at lacus finibus tempus eget lobortis neque. Praesent tristique urna vitae risus faucibus, sed ornare libero consectetur. Sed neque urna, gravida vel arcu a, posuere maximus erat. Nulla iaculis condimentum leo auctor accumsan.<br><br>
+            </div><br><br><br><br><br>
+        
+        </div>
+
+            <!-- Flowers Page -->
+            <div class='page'><br><br><br>
+            
+            <div id = 'header' style='background:url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Lilium_%27Anastasiya%27_03.JPG/800px-Lilium_%27Anastasiya%27_03.JPG");height: 339px;margin: 10px -25px;background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;'></div>
+            <div style='font-family:"comfortaa" , cursive;' id='nature'><br><br>
+                A flower is a flower, end of story.
+            </div><br><br><br><br><br>
+        
+        </div>
+        
+        <script>
+            var page = document.getElementsByClassName('page');
+            
+            function changePage(index) {
+            
+                for ( var i = 0; i < page.length; i++ ) {
+                    
+                    page[i].style.display = 'none';
+                }
+                
+                page[index-1].style.display = 'block';
+                
+                window.scroll(0, 0);
+            }
+            
+            
+            changePage(1);
+        </script>
+        
+    </body>
+</html>
+
+<!-- Credit to KING for the Page Switching tutorial  -->
+<!-- 
+
+Start Date: 10th of November 2020
+End Date: ????
+
+-->
+
+
+
+
