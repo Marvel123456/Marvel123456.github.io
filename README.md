@@ -1,5 +1,7 @@
-https://marvel123456.github.io/ :- link </br>
-https://marvel123456.github.io/blog :- for blog </br>
-https://marvel123456.github.io/doodle :- for doodle (<i>Work In Progress</i>) </br>
-https://marvel123456.github.io/carousel :- bootstrap carousel </br>
+https://marvel123456.github.io
+https://marvel123456.github.io/blog
+https://marvel123456.github.io/doodle
+https://marvel123456.github.io/carousel 
 https://marvel123456.github.io/theatre
+
+i needa get a life ;-;
